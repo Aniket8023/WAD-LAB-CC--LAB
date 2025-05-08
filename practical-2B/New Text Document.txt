@@ -12,28 +12,76 @@ Step 1: Install Docker:
 		docker --version
 
 
-Step 2: 2️⃣ Create a Simple Docker Container (e.g., Ubuntu)
-    Now let’s pull a simple Ubuntu image and run a container.
+Step 2:Step 2: Microsoft Windows [Version 10.0.22631.5262]
+(c) Microsoft Corporation. All rights reserved.
 
-      1]Open PowerShell or Command Prompt and run:
+C:\Users\Aniket>docker -v
+Docker version 28.0.4, build b8034c0
 
-		docker pull ubuntu
-      2]After it’s pulled, run this to start an interactive Ubuntu container:
+C:\Users\Aniket>docker images
+
+C:\Users\Aniket>docker ps
+
+C:\Users\Aniket>docker pull openjdk
+
+C:\Users\Aniket>docker image
+Usage:  docker image COMMAND
+
+C:\Users\Aniket>docker images
+
+C:\Users\Aniket>docker run --name JAVA -it -d openjdk
+30fe652c177f4d278fc6b636f4e2660340901c5ec7a0e296f2968edd0ca90887
+
+C:\Users\Aniket>docker ps
+
+C:\Users\Aniket>docker exec -it JAVA jshell
+
+jshell> System.out.println("Hello Docker");
+Hello Docker
+
+jshell> int a=10
+a ==> 10
+
+jshell> int b=20
+b ==> 20
+
+jshell> System.out.println(a+b);
+30
+
+jshell> docker ps
+|  created variable ps, however, it cannot be referenced until class docker is declared
+
+jshell> /exit
+|  Goodbye
+
+C:\Users\Aniket>docker ps
+CONTAINER ID   IMAGE     COMMAND    CREATED         STATUS         PORTS     NAMES
+30fe652c177f   openjdk   "jshell"   3 minutes ago   Up 3 minutes             JAVA
+
+C:\Users\Aniket>docker container rm 30fe652c177f
+Error response from daemon: cannot remove container "/JAVA": container is running: stop the container before removing or force remove
+
+C:\Users\Aniket>docker stop
+docker: 'docker stop' requires at least 1 argument
 
 
-		docker run -it ubuntu
+C:\Users\Aniket>docker stop 30fe652c177f
+30fe652c177f
 
-      3] Inside the container, try commands like:
+C:\Users\Aniket>docker container rm 30fe652c177f
+30fe652c177f
 
+C:\Users\Aniket>docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
-		ls
-		pwd
-      4] To exit the container, type:
+C:\Users\Aniket>docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+ubuntu       latest    6015f66923d7   10 days ago   117MB
+openjdk      latest    9b448de897d2   2 years ago   727MB
 
-		exit
+C:\Users\Aniket>docker image prune
+WARNING! This will remove all dangling images.
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: 0B
 
-Step 3: Example Commands to Try Inside Container(Optional):
-
-			apt update
-			apt install nano
-			nano hello.txt   
+C:\Users\Aniket> 
