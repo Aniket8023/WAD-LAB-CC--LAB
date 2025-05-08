@@ -1,0 +1,39 @@
+Step-by-Step Guide to Create a Docker Container Environment:
+Step 1: Install Docker:
+
+	1]Download Docker Desktop from Docker's official site.
+		https://www.docker.com/products/docker-desktop
+
+	2]Follow the installation instructions.
+
+	3]After installation, Docker should automatically start. You can verify it by 	opening a terminal and typing:
+
+
+		docker --version
+
+
+Step 2: 2️⃣ Create a Simple Docker Container (e.g., Ubuntu)
+    Now let’s pull a simple Ubuntu image and run a container.
+
+      1]Open PowerShell or Command Prompt and run:
+
+		docker pull ubuntu
+      2]After it’s pulled, run this to start an interactive Ubuntu container:
+
+
+		docker run -it ubuntu
+
+      3] Inside the container, try commands like:
+
+
+		ls
+		pwd
+      4] To exit the container, type:
+
+		exit
+
+Step 3: Example Commands to Try Inside Container(Optional):
+
+			apt update
+			apt install nano
+			nano hello.txt   

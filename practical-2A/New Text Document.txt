@@ -1,0 +1,11 @@
+Push Code to GitHub using Git Commands
+
+1]cd path/to/your/project
+2]git init
+3]git add .
+4]git commit -m "Initial commit"
+5]git remote add origin https://github.com/username/MyFirstRepo.git
+6]git push -u origin master
+7]git push -u origin main
+
+

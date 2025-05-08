@@ -1,0 +1,8 @@
+<div class="container wrapper">
+  <div *ngIf="userList && userList.length">
+    <h3>User profile</h3>
+    <h5>Name: {{ userList[0] }}</h5>
+    <h5>Email: {{ userList[1] }}</h5>
+    <button class="btn btn-primary" (click)="onLogout()">Logout</button>
+  </div>
+</div>

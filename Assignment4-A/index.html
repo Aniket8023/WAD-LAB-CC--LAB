@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Company Table</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+</head>
+  
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1 style="color:#6060a3;">Company Website</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h3>Company Information Table</h3>
+            <table data-role="table" class="ui-responsive">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Department</th>
+                        <th>Domain</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lorem, ipsum.</td>
+                        <td>Computer Science</td>
+                        <td>
+                            <a href="https://cms.sinhgad.edu/sinhgad_engineering_institutes/sknsits_lonavala/about_us.aspx" data-rel="external">
+                                Visit Company Site
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" id="Button" value="Display Table Class Info">
+            <div id="log"></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // For demo: Show class option when button is clicked
+            $("#Button").on('click', function () {
+                var tableClass = $("table").attr("class");
+                $("#log").html("Table class: " + tableClass);
+            });
+        });
+    </script>
+</body>
+  
+</html>

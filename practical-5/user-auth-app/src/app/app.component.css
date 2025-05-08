@@ -1,0 +1,26 @@
+.navbar {
+    background-color: rgb(189, 164, 164);  /* Light background */
+    padding: 10px 20px ;
+    display: flex;
+    justify-content: center;  /* Center the links */
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  
+  .nav-link {
+    text-decoration: none;  /* Remove underline */
+    color:black;  /* Blue color */
+    font-size: 16px;  /* Font size */
+    margin: 0 15px;  /* Space between the links */
+    transition: color 0.3s ease;  /* Smooth color transition */
+  }
+  
+  .nav-link:hover {
+    color: #0056b3;  /* Darker blue on hover */
+  }
+  
+  .separator {
+    color: #6c757d;  /* Gray color for separator */
+    margin: 0 10px;
+  }
+  
